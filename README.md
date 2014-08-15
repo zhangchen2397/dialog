@@ -3,9 +3,7 @@ dialog
 
 该dialog组件为针对于移动webapp开发，小巧轻量，对外调用API简单便捷，配置灵活，UI完全自定义。该组件包含常见的confirm弹出层、alert弹出层及自定义弹出层，满足弹出层开发需求。
 
-[先点击查看demo](http://zhangchen2397.github.io/infiniteScrollPage/demo/) (建议扫描下方二维码手机上体验效果更佳)
-
-![qr code](http://zhangchen2397.github.io/infiniteScrollPage/demo/images/qrcode.png)
+[先点击查看demo](http://zhangchen2397.github.io/dialog/)
 
 ###组件主要功能
 1. 默认定制3种常用的弹出层形式（confirm、alert、normal）
@@ -77,7 +75,7 @@ this.defaultConfig = {
         <span class="btn btn-ok">#{btnOk}</span>
         <span class="btn btn-cancel">#{btnCancel}</span>
     </div>
-</div
+</div>
 ```
 
 ###组件初始化及使用
@@ -129,3 +127,5 @@ this.defaultConfig = {
     } );
 } )();
 ```
+
+[点击查看更多demo](http://zhangchen2397.github.io/dialog/)
