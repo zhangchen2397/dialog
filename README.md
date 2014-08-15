@@ -3,7 +3,9 @@ dialog
 
 该dialog组件为针对于移动webapp开发，小巧轻量，对外调用API简单便捷，配置灵活，UI完全自定义。该组件包含常见的confirm弹出层、alert弹出层及自定义弹出层，满足弹出层开发需求。
 
-[先点击查看demo](http://zhangchen2397.github.io/dialog/)
+[先点击查看demo](http://zhangchen2397.github.io/dialog/) (建议扫描下方二维码手机上体验效果更佳)
+
+![qr code](http://zhangchen2397.github.io/dialog/qr_code.png)
 
 ###组件主要功能
 1. 默认定制3种常用的弹出层形式（confirm、alert、normal）
