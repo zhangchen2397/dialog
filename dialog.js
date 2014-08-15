@@ -17,7 +17,7 @@
 
 ( function( root, factory ) {
     if ( typeof define === 'function' ) {
-        define( 'infiniteScrollPage', [ 'jqmobi' ], function( $ ) {
+        define( 'dialog', [ 'jqmobi' ], function( $ ) {
             return factory( root, $ );
         } );
     } else {
