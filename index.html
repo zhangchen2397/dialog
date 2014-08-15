@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <title>移动webapp dialog弹出层组件</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <style>
+        body {
+            text-align: center;
+        }
+        .dialog-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            opacity: 0.2;
+            width: 100%;
+            z-index: 10;
+        }
+        .dialog {
+            max-width: 340px;
+            text-align: left;
+            z-index: 11;
+            font-family: Helvetica;
+            background-color: #FFFFFF;
+            font-size: 14px;
+            position: fixed;
+            border-radius: 3px;
+        }
+        .dialog .hd {
+            padding-left: 20px;
+            height: 35px;
+            line-height: 35px;
+            border-bottom: 1px solid #ddd8ce;
+        }
+        .dialog .hd .close {
+            float: right;
+            padding-right: 15px;
+        }
+        .dialog .bd {
+            padding: 12px 20px 15px;
+            line-height: 20px;
+
+            max-height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .dialog .ft {
+            border-top: 1px solid #ddd8ce;
+            height: 35px;
+            line-height: 35px;
+            display: -webkit-box;
+        }
+        .dialog .ft .btn {
+            display: block;
+            -webkit-box-flex: 1;
+            margin-right: -1px;
+            border-right: 1px solid #ddd8ce;
+            text-align: center;
+            color: #017AFF;
+            font-weight: bold;
+        }
+        .dialog .ft .btn:last-child {
+            border-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <p><a id="confirm-btn" href="javascript:;">这是一个confirm弹出层</a></p>
+    <p><a id="alert-btn" href="javascript:;">这是一个alert弹出层</a></p>
+    <p><a id="normal-btn" href="javascript:;">这是一个confirm弹出层</a></p>
+
+    <script src="./jqmobi.js"></script>
+    <script src="./dialog.js"></script>
+
+    <script>
+        ( function() {
+            var content = '这里是弹出层的主体内容，可以自定义你想要的标签及内容，方便满足各种样式需求。';
+
+            //初始化confirm弹出层
+            var confirmDialog = new dialog.dialog( {
+                content: content,
+                type: 'confirm',
+                title: '这是一个confirm弹出层',
+                showCloseBtn: true,
+                clickBtnOkCb: function() {
+                    alert( '这是点击确定按钮的回调，默认为关闭弹出层' );
+                },
+                clickBtnCancelCb: function() {
+                    alert( '这是点击取消按钮的回调，默认为关闭弹出层' );
+                }
+            } );
+
+            //初始化alert弹出层
+            var alertDialog = dialog.createAlertDialog( {
+                content: content,
+                title: '这是一个alert弹出层',
+                showCloseBtn: true,
+                clickBtnOkCb: function() {
+                    alert( '这是点击确定按钮的回调，默认为关闭弹出层' );
+                }
+            } );
+
+            //初始化自定义弹出层
+            var normalDialog = dialog.createNormalDialog( {
+                content: content,
+                title: '这是一个普通弹出层',
+                showCloseBtn: true
+            } );  
+
+            $( '#confirm-btn' ).bind( 'click', function() {
+                confirmDialog.show();
+            } );
+
+            $( '#alert-btn' ).bind( 'click', function() {
+                alertDialog.show();
+            } ); 
+
+            $( '#normal-btn' ).bind( 'click', function() {
+                normalDialog.show();
+            } );
+        } )();
+    </script>
+</body>
+</html>
