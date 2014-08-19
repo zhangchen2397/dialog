@@ -82,23 +82,14 @@
                 content: content,
                 type: 'confirm',
                 title: '这是一个confirm弹出层',
-                showCloseBtn: true,
-                clickBtnOkCb: function() {
-                    //alert( '这是点击确定按钮的回调，默认为关闭弹出层' );
-                },
-                clickBtnCancelCb: function() {
-                    //alert( '这是点击取消按钮的回调，默认为关闭弹出层' );
-                }
+                showCloseBtn: true
             } );
 
             //初始化alert弹出层
             var alertDialog = dialog.createAlertDialog( {
                 content: content,
                 title: '这是一个alert弹出层',
-                showCloseBtn: true,
-                clickBtnOkCb: function() {
-                    //alert( '这是点击确定按钮的回调，默认为关闭弹出层' );
-                }
+                showCloseBtn: true
             } );
 
             //初始化自定义弹出层
